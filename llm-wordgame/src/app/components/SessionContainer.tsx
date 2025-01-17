@@ -3,7 +3,7 @@ import { GameSession, gamestates, ParticipantFormData, SessionData } from '../ty
 import ParticipantForm from './ParticipantForm';
 import GameContainer from './GameContainer';
 import Leaderboard from './LeaderBoard';
-import { submitSessionData } from '../llm_communication/connector';
+import { submitSessionData } from '../llm_communication/llm_connector';
 
 
 export default function SessionContainer() {

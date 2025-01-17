@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useRoundData } from "@/components/customhooks/useRoundData";
 import words from "../static/words";
 import { GameSession, hint, ParticipantFormData, word } from "../types/types";
-import { guessWord, generateDescription } from "../llm_communication/connector";
+import { guessWord, generateDescription } from "../llm_communication/llm_connector";
 import SessionCard from "@/components/ui/sessionCard";
 import GuesserContainer from "./GuesserContainer";
 import QuizmasterContainer from "./QuizmasterContainer";

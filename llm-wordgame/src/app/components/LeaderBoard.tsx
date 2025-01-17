@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLeaderBoard } from "../llm_communication/connector";
+import { getLeaderBoard } from "../llm_communication/llm_connector";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { SessionData, SessionDataBackend } from "../types/types";
 import { timerFromSeconds } from "@/lib/utils";
