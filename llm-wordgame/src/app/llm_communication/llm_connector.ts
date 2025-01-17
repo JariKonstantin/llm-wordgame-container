@@ -1,6 +1,6 @@
 import { SessionData, SessionDataBackend } from "../types/types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL + '/wordgameapi';
 
 
 export const generateDescription = async (word: string, bannedWords: string[]): Promise<string> => {

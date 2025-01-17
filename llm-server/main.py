@@ -40,7 +40,7 @@ sentence_similarity_model = SentenceTransformer(sentence_similarity_model_name)
 logger.log(logging.INFO, "Models loaded")
 
 
-@app.get("/generate")
+@app.get("/wordgameapi/generate")
 async def generate_description(word: str, banned_words: str):
     logger.log(
         logging.INFO,
@@ -70,7 +70,7 @@ async def generate_description(word: str, banned_words: str):
     return output
 
 
-@app.get("/solve")
+@app.get("/wordgameapi/solve")
 async def solve_word(description: str, history: str, word: str):
     logger.log(
         logging.INFO,
@@ -134,7 +134,7 @@ class GameSessionData(BaseModel):
     rounds_data: List[RoundData]
 
 
-@app.post("/submit-session")
+@app.post("/wordgameapi/submit-session")
 def submit_session(game_session_data: GameSessionData, db: Session = Depends(get_db)):
     game_session = GameSession(
         avatar=game_session_data.avatar,
@@ -160,7 +160,7 @@ def submit_session(game_session_data: GameSessionData, db: Session = Depends(get
     return game_session
 
 
-@app.get("/leaderboard")
+@app.get("/wordgameapi/leaderboard")
 def get_leaderboard(db: Session = Depends(get_db)):
     leaderboard = (
         db.query(GameSession)
@@ -171,7 +171,7 @@ def get_leaderboard(db: Session = Depends(get_db)):
     return leaderboard
 
 
-@app.get("/leaderboard/dump")
+@app.get("/wordgameapi/leaderboard/dump")
 def dump_leaderboard(db: Session = Depends(get_db)):
     leaderboard = (
         db.query(GameSession)

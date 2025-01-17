@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './carousel';
 import { Avatar, AvatarImage } from './avatar';
 
-const avatars = Array.from({ length: 24 }, (_, i) => `ava_${i + 1}.jpg`);
+const avatars = Array.from({ length: 24 }, (_, i) => `/wordgame/ava_${i + 1}.jpg`);
 
 type AvatarSelectorProps = {
   onSelectAvatar: (avatar: string) => void;
