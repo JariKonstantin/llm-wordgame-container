@@ -183,6 +183,8 @@ def dump_leaderboard(db: Session = Depends(get_db)):
     writer = csv.writer(output)
     writer.writerow(
         [
+            "id",
+            "timestamp",
             "avatar",
             "username",
             "age",
@@ -202,6 +204,8 @@ def dump_leaderboard(db: Session = Depends(get_db)):
     for session in leaderboard:
         writer.writerow(
             [
+                session.id,
+                session.timestamp,
                 session.avatar,
                 session.username,
                 session.age,
