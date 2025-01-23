@@ -80,7 +80,7 @@ export default function QuizmasterContainer({
           <Button
             variant="outline_success"
             onClick={() => setDescription(descriptionInput)}
-            disabled={descriptionInput.length === 0 || descriptionInput.length > 100 || containsBannedWords || roundData.wordDescription.length > 0}
+            disabled={descriptionInput.length === 0 || descriptionInput.length > 100 || containsBannedWords || roundData.wordDescription.length > 0 || roundData.roundState === "finished"}
           >
             Set description
           </Button>
