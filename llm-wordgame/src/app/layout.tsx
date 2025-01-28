@@ -5,7 +5,7 @@ import { Theme } from "@radix-ui/themes";
 
 
 export const metadata: Metadata = {
-  title: "LLM-Wordgame",
+  title: "Wordwhiz",
 };
 
 export default function RootLayout({

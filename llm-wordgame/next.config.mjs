@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  basePath: '/wordgame',
-  assetPrefix: '/wordgame/',
+  basePath: '/wordwhiz',
+  assetPrefix: '/wordwhiz/',
 };
 
 export default nextConfig;
