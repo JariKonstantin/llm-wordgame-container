@@ -35,7 +35,7 @@ export default function Home() {
             </Button>
             <Image
               priority
-              src={"/wordhiz/logo.png"}
+              src={"/wordwhiz/logo.png"}
               alt="logo"
               width={250}
               height={250}
