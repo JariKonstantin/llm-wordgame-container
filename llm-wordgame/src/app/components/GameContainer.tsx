@@ -39,7 +39,7 @@ export default function GameContainer({
   const [feedbackType, setFeedbackType] = useState<'success' | 'failure'>('success');
 
   const maxRounds = parseInt(process.env.NEXT_PUBLIC_MAX_ROUNDS || "8", 10);
-  const roundTimer = parseInt(process.env.NEXT_PUBLIC_ROUND_TIMER || "60", 10);
+  const roundTimer = parseInt(process.env.NEXT_PUBLIC_ROUND_TIMER || "90", 10);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   // randomly select 8 words

@@ -4,7 +4,7 @@ import { useState } from "react";
 const initialRoundData: RoundData = {
   round: 0,
   roundState: "waiting",
-  roundTimer: parseInt(process.env.NEXT_PUBLIC_ROUND_TIMER || "60", 10),
+  roundTimer: parseInt(process.env.NEXT_PUBLIC_ROUND_TIMER || "90", 10),
   userRole: "quizmaster",
   word: undefined,
   wordDescription: "",
